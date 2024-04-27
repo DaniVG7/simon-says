@@ -1,4 +1,8 @@
-body {
+*{
+  box-sizing: border-box;
+}
+
+html {
   height: 100vh;
 }
 
@@ -21,17 +25,21 @@ main {
 main button {
   height: 30vh;
   width: 35vw;
+  max-width: 250px;
+  max-height: 350px;
   border-radius: 1em;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
   transition: box-shadow 0.3s ease; 
 }
 
 main button:hover {
-  box-shadow: none; 
   cursor: pointer;
   /* box-shadow: inset 0px 0px 100px 30px white; */
 }
 
+main button:active{
+  box-shadow: none; 
+}
 
 
 main button:nth-child(1) {
@@ -57,5 +65,67 @@ main button:nth-child(4) {
 button.on,
 button:active {
   box-shadow: inset 0px 0px 100px 30px white;
-  transition: 3s;
+}
+
+aside{
+text-align: center;
+}
+.debug{
+  text-align: center;
+  margin-top: 5em;
+  display: inline-flex;
+  gap: 100px;
+}
+
+#player-turn, #next-turn{
+  border-radius: 2em;
+  margin: auto;
+  height: 40px;
+  width: 200px;
+}
+
+
+#play{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+path{
+  fill: blue;
+  margin: 0;
+  padding: 0;
+}
+
+#play:active{
+  box-shadow: none;
+}
+
+#current-game{
+  display: none;
+}
+
+
+
+
+@media (max-width: 720px) {
+  
+  body{
+    width: 100vw;
+  }
+
+  main button {
+    height: 15vh;
+  }
+  
+  .debug{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px;
+  }
+
+  #next-turn, #player-turn{
+    margin: auto;
+  }
 }

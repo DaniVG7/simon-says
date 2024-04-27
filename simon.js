@@ -14,7 +14,7 @@ function getRandomInt() {
  */
 function setUpNextTurn() {
   game.push(getRandomInt());
-  document.querySelector(".debug #current-game").innerText = game.join("-");
+  // document.querySelector(".debug #current-game").innerText = game.join("-");  Esto hace que salga el numero de tecla a pulsar.
 }
 
 /**
@@ -26,7 +26,7 @@ function initGame() {
 
   for (let i of [1, 2, 3, 4]) {
     button = document.createElement("button");
-    button.innerText = buttons.length + 1;
+    // button.innerText = buttons.length + 1; para introducir el numero dentro del botón
     main.appendChild(button);
     buttons.push(button);
   }
