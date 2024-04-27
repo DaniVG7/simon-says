@@ -8,36 +8,38 @@ h1 {
 
 main {
   display: grid;
-  gap: 1em;
+  gap: 10px;
   grid-template-columns: 1fr 1fr;
   padding-left: 10vw;
   padding-right: 10vw;
+  width: max-content;
+  margin: auto;
 }
 
 main button {
-  height: 30%;
-  width: 30%;
-  border-radius: 10em;
+  height: 30vh;
+  width: 35vw;
+  border-radius: 1em;
 }
 
 main button:nth-child(1) {
   background-color: red;
-  border-top-left-radius: 4em;
+  border-top-left-radius: 10em;
 }
 
 main button:nth-child(2) {
   background-color: green;
-  border-top-right-radius: 4em;
+  border-top-right-radius: 10em;
 }
 
 main button:nth-child(3) {
   background-color: yellow;
-  border-bottom-left-radius: 4em;
+  border-bottom-left-radius: 10em;
 }
 
 main button:nth-child(4) {
   background-color: blue;
-  border-bottom-right-radius: 4em;
+  border-bottom-right-radius: 10em;
 }
 
 button.on,
