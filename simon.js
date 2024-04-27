@@ -89,7 +89,6 @@ function playerTurn() {
       if (game.toString() === clicksDone.toString()) {
         // por el momento "Hemos ganado, debemos pasar ala siguiente ronda"
         stopClicks();
-
         setUpNextTurn()
         play2()
 
@@ -97,6 +96,7 @@ function playerTurn() {
         // Error, partida perdida.
         stopClicks();
         console.log("Game Over");
+        alert("GAME OVER ❌👾");
       }
     } else {
       let inicial = game.slice(0, clicksDone.length);
@@ -107,6 +107,7 @@ function playerTurn() {
         // Error, partida perdida.
         stopClicks();
         console.log("Game Over");
+        alert("GAME OVER ❌👾");
       }
     }
   }
