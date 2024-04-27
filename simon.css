@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -28,10 +28,10 @@ main button {
   height: 40vh;
   width: 20vw;
   max-width: 250px;
-  max-height:250px;
+  max-height: 250px;
   border-radius: 1em;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease;
 }
 
 main button:hover {
@@ -39,10 +39,9 @@ main button:hover {
   /* box-shadow: inset 0px 0px 100px 30px white; */
 }
 
-main button:active{
-  box-shadow: none; 
+main button:active {
+  box-shadow: none;
 }
-
 
 main button:nth-child(1) {
   background-color: red;
@@ -69,62 +68,61 @@ button:active {
   box-shadow: inset 0px 0px 100px 30px white;
 }
 
-aside{
-text-align: center;
+aside {
+  text-align: center;
 }
-.debug{
+.debug {
   text-align: center;
   margin-top: 5em;
   display: inline-flex;
   gap: 100px;
 }
 
-#player-turn, #next-turn{
+#player-turn,
+#next-turn {
   border-radius: 10em;
   margin: auto;
   height: 100px;
   width: 100px;
 }
 
-
-#play{
+#play {
   cursor: pointer;
   border: none;
   background-color: transparent;
   padding: 0;
 }
 
-path{
+path {
   fill: rgb(255, 59, 222);
   margin: 0;
   padding: 0;
 }
 
-#play:active{
+#play:active {
   box-shadow: none;
 }
 
-#current-game{
+#current-game {
   display: none;
 }
 
-
-@media (max-width: 1280px){
+@media (max-width: 1280px) {
   main button {
     height: 22vh;
     width: 10vw;
+    min-width: 150px;
     border-radius: 1em;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-    transition: box-shadow 0.3s ease; 
+    transition: box-shadow 0.3s ease;
   }
-  main{
+  main {
     gap: 10px;
   }
 }
 
-@media (max-width: 720px) {
-  
-  body{
+@media (max-width: 560px) {
+  body {
     width: 100vw;
     height: 100vh;
   }
@@ -133,21 +131,21 @@ path{
     height: 20vh;
     width: 40vw;
   }
-  
-  .debug{
+
+  .debug {
     margin-top: 1em;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px;
     height: 40vh;
   }
-  
-  #play{
+
+  #play {
     margin-bottom: 10px;
   }
 
-  #next-turn, #player-turn{
+  #next-turn,
+  #player-turn {
     margin: 0 auto;
   }
 }
-
