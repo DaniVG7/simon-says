@@ -172,10 +172,7 @@ svg:active{
   }
 
   .debug {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
-    height: 40vh;
+    gap: 15px;
   }
 
   #next-turn,
