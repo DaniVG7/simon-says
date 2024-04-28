@@ -14,7 +14,7 @@ function getRandomInt() {
  */
 function setUpNextTurn() {
   game.push(getRandomInt());
-  // document.querySelector(".debug #current-game").innerText = game.join("-");  Esto hace que salga el numero de tecla a pulsar.
+   document.querySelector(".debug #current-game").innerText = game.join("-");  // Esto hace que salga el numero de tecla a pulsar.
 }
 
 /**
@@ -26,7 +26,7 @@ function initGame() {
 
   for (let i of [1, 2, 3, 4]) {
     button = document.createElement("button");
-    // button.innerText = buttons.length + 1; para introducir el numero dentro del botón
+    //button.innerText = buttons.length + 1; para introducir el numero dentro del botón
     main.appendChild(button);
     buttons.push(button);
   }
@@ -59,6 +59,7 @@ function play(event) {
 
 function play2() {
   let remainingToSwitchOn = [...game];
+  console.log(remainingToSwitchOn);
   function switchNext() {
     if (remainingToSwitchOn.length) {
       let btnNumber = remainingToSwitchOn.shift();
@@ -123,7 +124,9 @@ function playerTurn() {
 }
 
 setUpNextTurn()
-play2()
+// play2() para iniciar el juego sin la necesidad de darle al play...
+
+
 
 //TODO
 // UX xx
