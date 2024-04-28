@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  /* background-image: url(../imgs/retrorecre.jpg); 
+  background-repeat: no-repeat;
+  background-position: center -1075px;
+  background-size: cover;  */
+}
+
+h1 {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 35px;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  width: max-content;
+  margin: auto;
+  border-radius: 9em;
+  padding: 10px;
+}
+
+main button {
+  height: 40vh;
+  width: 20vw;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 1em;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+main button:hover {
+  cursor: pointer;
+  /* box-shadow: inset 0px 0px 100px 30px white; */
+}
+
+main button:active {
+  box-shadow: none;
+}
+
+main button:nth-child(1) {
+  background-color: red;
+  border-top-left-radius: 10em;
+}
+
+main button:nth-child(2) {
+  background-color: green;
+  border-top-right-radius: 10em;
+}
+
+main button:nth-child(3) {
+  background-color: yellow;
+  border-bottom-left-radius: 10em;
+}
+
+main button:nth-child(4) {
+  background-color: blue;
+  border-bottom-right-radius: 10em;
+}
+
+button.on,
+button:active {
+  box-shadow: inset 0 0 50px 0 white;
+}
+
+aside {
+  text-align: center;
+}
+.debug {
+  text-align: center;
+  display: inline-flex;
+  gap: 100px;
+  margin-top: 2em;
+}
+
+#player-turn,
+#next-turn {
+  cursor: pointer;
+  border-radius: 10em;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 0 15px 0 black;
+  transition: 0.5s ease;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#player-turn {
+  color: red;
+  box-shadow: 0 0 15px 0 red;
+}
+#player-turn:active {
+  box-shadow: none;
+}
+
+#next-turn:active {
+  box-shadow: none;
+}
+
+#play {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+path {
+  fill: rgb(255, 59, 222);
+  width: 100px;
+  height: 100px;
+}
+
+svg {
+  box-shadow: 0 0 20px 0px rgb(249, 114, 188);
+  border-radius: 10em;
+  width: 100px;
+  height: 100px;
+  transition: 0.5s ease;
+}
+
+svg:active {
+  box-shadow: none;
+}
+
+#play:active {
+  box-shadow: none;
+}
+
+#current-game {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  main button {
+    height: 25vh;
+    width: 10vw;
+    min-width: 150px;
+    border-radius: 1em;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease;
+  }
+  main {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  h1 {
+    line-height: 40px;
+  }
+
+  main button {
+    height: 20vh;
+    width: 40vw;
+  }
+
+  .debug {
+    gap: 15px;
+  }
+
+  #next-turn,
+  #player-turn {
+    margin: 0 auto;
+  }
+}
