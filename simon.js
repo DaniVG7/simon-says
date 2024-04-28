@@ -126,11 +126,11 @@ setUpNextTurn()
 play2()
 
 //TODO
-// UX
-// explosion al game over
-// reset button
-// verificar que los colroes sean correctos
-// mejorar estilo
+// UX xx
+// explosion al game over  xx
+// reset button xx
+// verificar que los colroes sean correctos  vv 
+// mejorar estilo vv 
 // sonido
-// 3D
+// 3D  vv
 // 
