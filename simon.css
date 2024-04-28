@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +12,8 @@ html {
 
 h1 {
   text-align: center;
+    font-family: 'Press Start 2P', cursive;
+  font-size: 35px;
 }
 
 main {
@@ -73,17 +77,36 @@ aside {
 }
 .debug {
   text-align: center;
-  margin-top: 5em;
   display: inline-flex;
   gap: 100px;
+  margin-top: 2em;
 }
 
 #player-turn,
 #next-turn {
+  cursor: pointer;
   border-radius: 10em;
   margin: auto;
   height: 100px;
   width: 100px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 0 15px 0 black;
+  transition: 0.5s ease;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#player-turn{
+  color: red;
+  box-shadow: 0 0 15px 0 red;
+}
+#player-turn:active{
+  box-shadow: none;
+}
+
+#next-turn:active{
+  box-shadow: none;
 }
 
 #play {
@@ -95,8 +118,20 @@ aside {
 
 path {
   fill: rgb(255, 59, 222);
-  margin: 0;
-  padding: 0;
+  width: 100px;
+  height: 100px;
+}
+
+svg{
+  box-shadow: 0 0 20px 0px rgb(249, 114, 188);
+  border-radius: 10em;
+  width: 100px;
+  height: 100px;
+  transition: 0.5s ease;
+}
+
+svg:active{
+  box-shadow: none;
 }
 
 #play:active {
@@ -127,21 +162,20 @@ path {
     height: 100vh;
   }
 
+  h1{
+    line-height: 40px;
+  }
+  
   main button {
     height: 20vh;
     width: 40vw;
   }
 
   .debug {
-    margin-top: 1em;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px;
+    gap: 20px;
     height: 40vh;
-  }
-
-  #play {
-    margin-bottom: 10px;
   }
 
   #next-turn,
