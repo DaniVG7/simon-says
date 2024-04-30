@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   /* background-image: url(../imgs/retrorecre.jpg); 
   background-repeat: no-repeat;
