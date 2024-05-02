@@ -1,6 +1,8 @@
 // globals
 let buttons = [];
 let game = [];
+let audio ;
+
 
 /**
  * Function to generate a random number between 0-3
@@ -14,7 +16,7 @@ function getRandomInt() {
  */
 function setUpNextTurn() {
   game.push(getRandomInt());
-   document.querySelector(".debug #current-game").innerText = game.join("-");  // Esto hace que salga el numero de tecla a pulsar.
+  document.querySelector(".debug #current-game").innerText = game.join("-");  // Esto hace que salga el numero de tecla a pulsar.
 }
 
 /**
@@ -33,6 +35,8 @@ function initGame() {
   document.querySelector("#next-turn").addEventListener("click", setUpNextTurn);
   document.querySelector("#play").addEventListener("click", play2);
   document.querySelector("#player-turn").addEventListener("click", playerTurn);
+
+  
 }
 
 /**
@@ -55,6 +59,8 @@ function play(event) {
     setTimeout(() => (event.target.disabled = false), delay);
     event.target.disabled = true;
   }
+  
+  
 }
 
 function play2() {
@@ -72,8 +78,17 @@ function play2() {
       clearInterval(timer);
       playerTurn()
     }
+    
   }
   let timer = setInterval(switchNext, 1000);
+  
+  if (!audio) {
+    audio = new Audio('./ImperialMarch.mp3');
+    audio.play();
+  }else if (audio.paused){
+    audio.currentTime = 0;
+    audio.play();
+  }
 }
 
 initGame();
@@ -109,6 +124,7 @@ function playerTurn() {
         stopClicks();
         console.log("Game Over");
         alert("GAME OVER ❌👾");
+        audio.pause();
       }
     }
   }
@@ -120,11 +136,12 @@ function playerTurn() {
     for (let button of buttons) {
       button.removeEventListener("click", buttonClicked);
     }
-  }
+  } 
 }
 
-setUpNextTurn()
-// play2() para iniciar el juego sin la necesidad de darle al play...
+setUpNextTurn();
+// play2() para iniciar el juego al cargar la página. 
+
 
 
 
@@ -137,3 +154,4 @@ setUpNextTurn()
 // sonido
 // 3D  vv
 // 
+

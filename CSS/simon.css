@@ -23,6 +23,10 @@ h1 {
   font-size: 35px;
 }
 
+/* .audio{
+  display: hidden;
+} */
+
 main {
   display: grid;
   gap: 20px;
