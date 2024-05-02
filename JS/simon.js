@@ -83,7 +83,7 @@ function play2() {
   let timer = setInterval(switchNext, 1000);
   
   if (!audio) {
-    audio = new Audio('./ImperialMarch.mp3');
+    audio = new Audio('./AUDIO/ImperialMarch.mp3');
     audio.play();
   }else if (audio.paused){
     audio.currentTime = 0;
@@ -151,7 +151,7 @@ setUpNextTurn();
 // reset button xx
 // verificar que los colroes sean correctos  vv 
 // mejorar estilo vv 
-// sonido
+// sonido vv
 // 3D  vv
 // 
 
